@@ -16,10 +16,12 @@ RSpec.describe Expense, type: :model do
 
   describe 'validations' do
     subject do
-      described_class.new(name: 'Groceries', amount: 50.0,
-                          user: User.create(name: 'Ye Min',
-                                            email: 'yemin@example.com', password: 'StrongPassword'),
-                          category: Category.create(name: 'Food'))
+      described_class.new(
+        name: 'Groceries',
+        amount: 50.0,
+        user: User.create(name: 'Ivonne Benites', email: 'ivonne@gmail.com', password: 'password1234569'),
+        category: Category.create(name: 'Food')
+      )
     end
 
     it 'is valid with valid attributes' do
