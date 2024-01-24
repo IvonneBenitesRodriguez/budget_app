@@ -18,8 +18,7 @@ RSpec.describe Category, type: :model do
   end
 
   describe 'validations' do
-    subject { described_class.new(name: 'Groceries') }
-
+    subject { described_class.new(name: 'Computer') }
     it 'requires name to be present' do
       subject.name = ''
       expect(subject).to_not be_valid
