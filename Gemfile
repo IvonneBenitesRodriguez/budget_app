@@ -5,8 +5,6 @@ ruby '3.1.4'
 # In your Gemfile
 gem 'devise', '~> 4.8'
 
-gem 'rspec-rails'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3'
 
