@@ -85,7 +85,7 @@ Rails.application.configure do
   config.active_support.report_deprecations = false
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  config.active_record.dump_schema_after_migration = true
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
@@ -95,3 +95,4 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end
+
