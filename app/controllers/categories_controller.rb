@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
     @category.user = current_user
 
     if @category.save
-      redirect_to root_path, notice: 'Successfully created'
+      redirect_to root_path, notice: 'Successfully created.'
     else
       render :new
     end

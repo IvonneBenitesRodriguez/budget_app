@@ -5,9 +5,7 @@ ruby '3.1.4'
 # In your Gemfile
 gem 'devise', '~> 4.8'
 
-gem 'omniauth'
-
-gem 'activerecord', '~>7.1'
+gem 'rspec'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3'

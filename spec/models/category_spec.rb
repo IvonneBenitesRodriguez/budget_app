@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
+<<<<<<< HEAD
   describe 'associations' do
     it 'belongs to a user' do
       association = described_class.reflect_on_association(:user)
@@ -30,4 +31,7 @@ RSpec.describe Category, type: :model do
       expect(subject.errors[:icon]).to include("can't be blank")
     end
   end
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> development
 end

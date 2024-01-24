@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
+<<<<<<< HEAD
   describe 'associations' do
     it 'belongs to a user with foreign key author_id' do
       association = described_class.reflect_on_association(:user)
@@ -46,4 +47,7 @@ RSpec.describe Expense, type: :model do
       expect(subject.errors[:amount]).to include('must be greater than 0')
     end
   end
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> development
 end

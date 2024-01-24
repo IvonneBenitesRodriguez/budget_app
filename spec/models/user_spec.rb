@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+<<<<<<< HEAD
   describe 'validations' do
     subject { described_class.new(name: 'Ye Min', email: 'yemin@gmail.com', password: 'StrongPassword') }
 
@@ -62,4 +63,7 @@ RSpec.describe User, type: :model do
       expect(described_class.devise_modules).to include(:validatable)
     end
   end
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> development
 end
