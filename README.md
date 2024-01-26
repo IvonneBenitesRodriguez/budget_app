@@ -1,9 +1,9 @@
 #   💰 Budget App  💰
 
-# 📗 Table of Contents
+# 📗 Table of Contents:
 
 - [💰 Budget App  💰](#-budget-app--)
-- [📗 Table of Contents](#-table-of-contents)
+- [📗 Table of Contents:](#-table-of-contents)
 - [📖 \[budget\_app\] ](#-budget_app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
