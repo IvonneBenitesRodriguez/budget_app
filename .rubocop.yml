@@ -9,6 +9,7 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
     - "**/rubocop/cop/discourse/**/*"
+    - 'vendor/**/*' # Exclude the vendor directory
 
   DisplayCopNames: true
 
