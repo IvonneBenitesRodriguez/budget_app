@@ -1,0 +1,23 @@
+current directory: /Users/ivonnebenites/Documents/Projects/budget_app/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.17.1/ext/bootsnap
+/usr/local/opt/ruby@3.1/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/ivonnebenites/Documents/Projects/budget_app/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.17.1/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240125-11159-i3d76x sitelibdir\=./.gem.20240125-11159-i3d76x clean
+
+current directory: /Users/ivonnebenites/Documents/Projects/budget_app/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.17.1/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240125-11159-i3d76x sitelibdir\=./.gem.20240125-11159-i3d76x
+compiling bootsnap.c
+bootsnap.c:822:10: warning: unused variable 'contents' [-Wunused-variable]
+  char * contents = NULL;
+         ^
+1 warning generated.
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/ivonnebenites/Documents/Projects/budget_app/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.17.1/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240125-11159-i3d76x sitelibdir\=./.gem.20240125-11159-i3d76x install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20240125-11159-i3d76x/bootsnap
+
+current directory: /Users/ivonnebenites/Documents/Projects/budget_app/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.17.1/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240125-11159-i3d76x sitelibdir\=./.gem.20240125-11159-i3d76x clean
