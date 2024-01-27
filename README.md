@@ -26,11 +26,11 @@
 <br/>
 
 ## 🛠 Live demo link <a name="live link">
-https://www.loom.com/share/d041f6b4ec1f4e7e90cad609fb596458
+https://hidden-woodland-06978-c43dd9640957.herokuapp.com/users/sign_up
 </a>
 
 ## 🛠 Video link <a name="live link">
-
+https://www.loom.com/share/d041f6b4ec1f4e7e90cad609fb596458
 </a>
 ## 🛠 Built With <a name="built-with"></a>
 
