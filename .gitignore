@@ -9,14 +9,15 @@
 
 # Ignore all environment files (except templates).
 /.env*
-!/.env*.erb
+/.env*.erb
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
-!/node_modules/
+/log/.keep
+/tmp/.keep
+/node_modules/
+/config/*
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
@@ -24,12 +25,13 @@
 
 # Ignore storage (uploaded files in development and any SQLite databases).
 /storage/*
-!/storage/.keep
+/storage/.keep
 /tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+/tmp/storage/
+/tmp/storage/.keep
 
 /public/assets
+
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
