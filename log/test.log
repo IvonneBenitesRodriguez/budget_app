@@ -1,0 +1,911 @@
+  [1m[36mActiveRecord::InternalMetadata Load (4.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (5.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (7.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:26.602265"], ["updated_at", "2024-01-27 12:15:26.602265"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 154)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 340)
+Completed 200 OK in 150ms (Views: 45.6ms | ActiveRecord: 43.5ms | Allocations: 12287)
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:26.956789"], ["updated_at", "2024-01-27 12:15:26.956789"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 108)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 268)
+Completed 200 OK in 18ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 5236)
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:26.999749"], ["updated_at", "2024-01-27 12:15:26.999749"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 121)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 283)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 1016)
+  [1m[36mTRANSACTION (24.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:27.051113"], ["updated_at", "2024-01-27 12:15:27.051113"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Count (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"icon"=>"", "name"=>""}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 122)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 285)
+Completed 200 OK in 28ms (Views: 12.1ms | ActiveRecord: 3.8ms | Allocations: 2615)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:27.157084"], ["updated_at", "2024-01-27 12:15:27.157084"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (20.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Category"], ["icon", nil], ["user_id", 53], ["created_at", "2024-01-27 12:15:27.277774"], ["updated_at", "2024-01-27 12:15:27.277774"]]
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (1.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "ed5221x94oqngr3d5uqsrc671xsz"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 12:15:27.308476"]]
+  [1m[36mActiveStorage::Attachment Create (1.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 19], ["blob_id", 19], ["created_at", "2024-01-27 12:15:27.311731"]]
+  [1m[36mCategory Update (29.7ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:27.315137"], ["id", 19]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: ed5221x94oqngr3d5uqsrc671xsz (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 46561d50-aa5d-4552-9854-1188c76e18e3) to Async(default) with arguments: #<GlobalID:0x0000000112482408 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/19>>
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"19"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 53], ["id", 19], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3]   [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3] Performing ActiveStorage::AnalyzeJob (Job ID: 46561d50-aa5d-4552-9854-1188c76e18e3) from Async(default) enqueued at 2024-01-27T12:15:27.355684000Z with arguments: #<GlobalID:0x0000000112521e68 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/19>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3]   [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered expenses/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 268)
+Completed 200 OK in 75ms (Views: 2.6ms | ActiveRecord: 29.0ms | Allocations: 9872)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3]   [1m[36mActiveStorage::Blob Update (31.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 19]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 19]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 19]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3]   [1m[36mCategory Update (0.4ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:27.494829"], ["id", 19]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [46561d50-aa5d-4552-9854-1188c76e18e3] Performed ActiveStorage::AnalyzeJob (Job ID: 46561d50-aa5d-4552-9854-1188c76e18e3) from Async(default) in 128.96ms
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:27.511060"], ["updated_at", "2024-01-27 12:15:27.511060"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (24.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (25.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Category"], ["icon", nil], ["user_id", 54], ["created_at", "2024-01-27 12:15:27.518263"], ["updated_at", "2024-01-27 12:15:27.518263"]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "vavdyqc8hyhjff6i5w0x0z9oilfv"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 12:15:27.547430"]]
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 20], ["blob_id", 20], ["created_at", "2024-01-27 12:15:27.548821"]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:27.550066"], ["id", 20]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: vavdyqc8hyhjff6i5w0x0z9oilfv (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0c23ec9c-9f22-4e46-9f85-c1fc7fb74934) to Async(default) with arguments: #<GlobalID:0x0000000112680638 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/20>>
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"20"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934]   [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934] Performing ActiveStorage::AnalyzeJob (Job ID: 0c23ec9c-9f22-4e46-9f85-c1fc7fb74934) from Async(default) enqueued at 2024-01-27T12:15:27.553871000Z with arguments: #<GlobalID:0x00000001126d3810 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/20>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 54], ["id", 20], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered expenses/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 393)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 555)
+Completed 200 OK in 16ms (Views: 4.7ms | ActiveRecord: 5.2ms | Allocations: 2098)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934]   [1m[36mTRANSACTION (20.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934]   [1m[36mActiveStorage::Blob Update (20.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 20]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 20]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 20]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934]   [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:27.597446"], ["id", 20]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0c23ec9c-9f22-4e46-9f85-c1fc7fb74934] Performed ActiveStorage::AnalyzeJob (Job ID: 0c23ec9c-9f22-4e46-9f85-c1fc7fb74934) from Async(default) in 45.32ms
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (41.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:27.653469"], ["updated_at", "2024-01-27 12:15:27.653469"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Category"], ["icon", nil], ["user_id", 55], ["created_at", "2024-01-27 12:15:27.660075"], ["updated_at", "2024-01-27 12:15:27.660075"]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "w80q3fvox3esz4xj562vrnpdzyo0"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 12:15:27.665498"]]
+  [1m[36mActiveStorage::Attachment Create (26.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 21], ["blob_id", 21], ["created_at", "2024-01-27 12:15:27.668065"]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:27.695201"], ["id", 21]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: w80q3fvox3esz4xj562vrnpdzyo0 (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 36bb958f-5f73-4cde-9384-5ef82a69ce8f) to Async(default) with arguments: #<GlobalID:0x00000001127d35d0 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/21>>
+Processing by ExpensesController#create as HTML
+  Parameters: {"expense"=>{"amount"=>"100", "name"=>""}, "category_id"=>"21"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f]   [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f] Performing ActiveStorage::AnalyzeJob (Job ID: 36bb958f-5f73-4cde-9384-5ef82a69ce8f) from Async(default) enqueued at 2024-01-27T12:15:27.699329000Z with arguments: #<GlobalID:0x00000001127b15c0 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/21>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendered expenses/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 160)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f]   [1m[36mActiveStorage::Blob Update (1.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 21]]
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 618)
+Completed 200 OK in 48ms (Views: 3.8ms | ActiveRecord: 9.6ms | Allocations: 3309)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f]   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 21]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 21]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f]   [1m[36mCategory Update (0.3ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:27.753590"], ["id", 21]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [36bb958f-5f73-4cde-9384-5ef82a69ce8f] Performed ActiveStorage::AnalyzeJob (Job ID: 36bb958f-5f73-4cde-9384-5ef82a69ce8f) from Async(default) in 55.11ms
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:27.764656"], ["updated_at", "2024-01-27 12:15:27.764656"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-01-27 07:15:27 -0500
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (3.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 56]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 56]]
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1048)
+  Rendered layouts/_navbar.html.erb (Duration: 2.3ms | Allocations: 874)
+  Rendered layouts/_alerts.html.erb (Duration: 0.5ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 384.6ms | Allocations: 84589)
+Completed 200 OK in 387ms (Views: 382.1ms | ActiveRecord: 3.2ms | Allocations: 85273)
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.201198"], ["updated_at", "2024-01-27 12:15:28.201198"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Example Category"], ["icon", nil], ["user_id", 57], ["created_at", "2024-01-27 12:15:28.205461"], ["updated_at", "2024-01-27 12:15:28.205461"]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "nrse1vt2myywz3wnki1ofgl5z3l9"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 12:15:28.209980"]]
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 22], ["blob_id", 22], ["created_at", "2024-01-27 12:15:28.212292"]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:28.214265"], ["id", 22]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: nrse1vt2myywz3wnki1ofgl5z3l9 (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 62a33021-d924-4406-8c12-9b7e569b8d71) to Async(default) with arguments: #<GlobalID:0x00000001123819c8 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/22>>
+Started GET "/categories/22" for 127.0.0.1 at 2024-01-27 07:15:28 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"22"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71]   [1m[36mActiveStorage::Blob Load (19.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71] Performing ActiveStorage::AnalyzeJob (Job ID: 62a33021-d924-4406-8c12-9b7e569b8d71) from Async(default) enqueued at 2024-01-27T12:15:28.218805000Z with arguments: #<GlobalID:0x00000001123d2828 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/22>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 57], ["id", 22], ["LIMIT", 1]]
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 22]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71]   [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71]   [1m[36mActiveStorage::Blob Update (1.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 22]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 22]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71]   [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 22]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71]   [1m[36mCategory Update (0.7ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:28.256151"], ["id", 22]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62a33021-d924-4406-8c12-9b7e569b8d71] Performed ActiveStorage::AnalyzeJob (Job ID: 62a33021-d924-4406-8c12-9b7e569b8d71) from Async(default) in 35.7ms
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 22]]
+  [1m[36mExpense Load (0.4ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 22]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1577)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 533)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2737)
+Completed 200 OK in 41ms (Views: 13.5ms | ActiveRecord: 3.5ms | Allocations: 4819)
+  [1m[36mTRANSACTION (22.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.298599"], ["updated_at", "2024-01-27 12:15:28.298599"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Example Category"], ["icon", nil], ["user_id", 58], ["created_at", "2024-01-27 12:15:28.302055"], ["updated_at", "2024-01-27 12:15:28.302055"]]
+  [1m[36mActiveStorage::Attachment Load (2.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "qapt6u3v4r55hcmklzyo22evimmo"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 12:15:28.308769"]]
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 23], ["blob_id", 23], ["created_at", "2024-01-27 12:15:28.311432"]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:28.313083"], ["id", 23]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.4ms) [0m[32mUploaded file to key: qapt6u3v4r55hcmklzyo22evimmo (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 6a550b68-0129-4253-aae8-f1065b87b1d5) to Async(default) with arguments: #<GlobalID:0x00000001125d3b40 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/23>>
+Started GET "/categories/23/expenses/new" for 127.0.0.1 at 2024-01-27 07:15:28 -0500
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"23"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5]   [1m[36mActiveStorage::Blob Load (22.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5] Performing ActiveStorage::AnalyzeJob (Job ID: 6a550b68-0129-4253-aae8-f1065b87b1d5) from Async(default) enqueued at 2024-01-27T12:15:28.318250000Z with arguments: #<GlobalID:0x0000000112628438 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/23>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mCategory Load (3.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 58], ["id", 23], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5]   [1m[36mActiveStorage::Blob Update (1.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 23]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5]   [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 23]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 23]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5]   [1m[36mCategory Update (2.1ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:28.357735"], ["id", 23]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5]   [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [6a550b68-0129-4253-aae8-f1065b87b1d5] Performed ActiveStorage::AnalyzeJob (Job ID: 6a550b68-0129-4253-aae8-f1065b87b1d5) from Async(default) in 46.8ms
+  [1m[36mCategory Load (21.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 58]]
+  Rendered expenses/new.html.erb within layouts/application (Duration: 45.2ms | Allocations: 4018)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 503)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 5161)
+Completed 200 OK in 76ms (Views: 28.3ms | ActiveRecord: 24.9ms | Allocations: 6632)
+Started POST "/categories/23/expenses" for 127.0.0.1 at 2024-01-27 07:15:28 -0500
+Processing by ExpensesController#create as HTML
+  Parameters: {"expense"=>{"name"=>"New Expense", "amount"=>"50", "category_id"=>"23"}, "commit"=>"Save", "category_id"=>"23"}
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mExpense Create (2.5ms)[0m  [1m[32mINSERT INTO "expenses" ("name", "amount", "author_id", "created_at", "updated_at", "category_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "New Expense"], ["amount", "50.0"], ["author_id", 58], ["created_at", "2024-01-27 12:15:28.449982"], ["updated_at", "2024-01-27 12:15:28.449982"], ["category_id", 23]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories/23
+Completed 302 Found in 39ms (ActiveRecord: 24.7ms | Allocations: 3502)
+Started GET "/categories/23" for 127.0.0.1 at 2024-01-27 07:15:28 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 58], ["id", 23], ["LIMIT", 1]]
+  [1m[36mExpense Sum (1.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 23]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCACHE Expense Sum (0.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 23]]
+  [1m[36mExpense Load (24.6ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 23]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.7ms | Allocations: 421)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 501)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 1546)
+Completed 200 OK in 39ms (Views: 5.9ms | ActiveRecord: 26.7ms | Allocations: 3050)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (25.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (26.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.545797"], ["updated_at", "2024-01-27 12:15:28.545797"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Example Category"], ["icon", nil], ["user_id", 59], ["created_at", "2024-01-27 12:15:28.550838"], ["updated_at", "2024-01-27 12:15:28.550838"]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 24], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "al1jz8r2hkypwqdt96ykasmctwt6"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 12:15:28.555821"]]
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 24], ["blob_id", 24], ["created_at", "2024-01-27 12:15:28.558202"]]
+  [1m[36mCategory Update (0.6ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:28.560302"], ["id", 24]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.9ms) [0m[32mUploaded file to key: al1jz8r2hkypwqdt96ykasmctwt6 (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 085ddd80-dfb9-4080-9576-de50c07f2d2e) to Async(default) with arguments: #<GlobalID:0x0000000112a89f90 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/24>>
+Started GET "/categories/24/expenses/new" for 127.0.0.1 at 2024-01-27 07:15:28 -0500
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"24"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e]   [1m[36mActiveStorage::Blob Load (22.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e] Performing ActiveStorage::AnalyzeJob (Job ID: 085ddd80-dfb9-4080-9576-de50c07f2d2e) from Async(default) enqueued at 2024-01-27T12:15:28.567413000Z with arguments: #<GlobalID:0x0000000112ad3618 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/24>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mCategory Load (4.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 59], ["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e]   [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e]   [1m[36mActiveStorage::Blob Update (4.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 24]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 24]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 24]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e]   [1m[36mCategory Update (0.6ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:15:28.612818"], ["id", 24]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [085ddd80-dfb9-4080-9576-de50c07f2d2e] Performed ActiveStorage::AnalyzeJob (Job ID: 085ddd80-dfb9-4080-9576-de50c07f2d2e) from Async(default) in 47.6ms
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 59]]
+  Rendered expenses/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1893)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 490)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 3021)
+Completed 200 OK in 49ms (Views: 19.9ms | ActiveRecord: 4.4ms | Allocations: 4413)
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (24.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.759205"], ["updated_at", "2024-01-27 12:15:28.759205"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (27.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (28.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.797830"], ["updated_at", "2024-01-27 12:15:28.797830"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.810725"], ["updated_at", "2024-01-27 12:15:28.810725"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.847910"], ["updated_at", "2024-01-27 12:15:28.847910"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (24.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:15:28.913120"], ["updated_at", "2024-01-27 12:15:28.913120"], ["name", "yemin"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (83.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (37.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (24.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (207.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_test"[0m
+  [1m[35m (314.5ms)[0m  [1m[35mCREATE DATABASE "budget_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  [1m[35m (39.5ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "expenses" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "expenses" ("id" bigserial primary key, "name" character varying, "amount" decimal, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "category_id" bigint)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_author_id" ON "expenses" ("author_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_category_id" ON "expenses" ("category_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "name" character varying)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (13.6ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" ADD CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "categories" ADD CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "expenses" ADD CONSTRAINT "fk_rails_06966d0da0"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "expenses" ADD CONSTRAINT "fk_rails_896acdaedb"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20240125193750)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20240125193619),
+(20240125193349),
+(20240125193144),
+(20240125192856),
+(20240125192543),
+(20240125190822);[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2024-01-27 13:02:41.186875', '2024-01-27 13:02:41.186881') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '5d6814587d64456041c94b1228ef5441a5ffaaa8', '2024-01-27 13:02:41.191213', '2024-01-27 13:02:41.191217') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (22.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:41.497560"], ["updated_at", "2024-01-27 13:02:41.497560"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 154)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 340)
+Completed 200 OK in 105ms (Views: 11.3ms | ActiveRecord: 5.7ms | Allocations: 10002)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:41.806835"], ["updated_at", "2024-01-27 13:02:41.806835"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 108)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 268)
+Completed 200 OK in 17ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 5239)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:41.837666"], ["updated_at", "2024-01-27 13:02:41.837666"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 283)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1020)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:41.858529"], ["updated_at", "2024-01-27 13:02:41.858529"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCategory Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"icon"=>"", "name"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered categories/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 122)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 285)
+Completed 200 OK in 10ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2180)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:41.899176"], ["updated_at", "2024-01-27 13:02:41.899176"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Category"], ["icon", nil], ["user_id", 5], ["created_at", "2024-01-27 13:02:41.991441"], ["updated_at", "2024-01-27 13:02:41.991441"]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (1.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "ztjk0ju3b2rxflglbkhjx8vl9jsv"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 13:02:41.996756"]]
+  [1m[36mActiveStorage::Attachment Create (2.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 1], ["blob_id", 1], ["created_at", "2024-01-27 13:02:42.000443"]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.004671"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: ztjk0ju3b2rxflglbkhjx8vl9jsv (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 14918048-b3c4-4822-ba0a-99a0925aa285) to Async(default) with arguments: #<GlobalID:0x000000010ccc5120 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/1>>
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 5], ["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285] Performing ActiveStorage::AnalyzeJob (Job ID: 14918048-b3c4-4822-ba0a-99a0925aa285) from Async(default) enqueued at 2024-01-27T13:02:42.012290000Z with arguments: #<GlobalID:0x000000010cdada38 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285]   [1m[36mActiveStorage::Blob Update (1.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285]   [1m[36mCategory Update (0.8ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.055856"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [14918048-b3c4-4822-ba0a-99a0925aa285] Performed ActiveStorage::AnalyzeJob (Job ID: 14918048-b3c4-4822-ba0a-99a0925aa285) from Async(default) in 42.84ms
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered expenses/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 109)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 269)
+Completed 200 OK in 50ms (Views: 3.0ms | ActiveRecord: 4.5ms | Allocations: 11752)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.078652"], ["updated_at", "2024-01-27 13:02:42.078652"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (2.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Category"], ["icon", nil], ["user_id", 6], ["created_at", "2024-01-27 13:02:42.084341"], ["updated_at", "2024-01-27 13:02:42.084341"]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "hiz1qvlid12ek50l219j06wcaxr9"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 13:02:42.090583"]]
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 2], ["blob_id", 2], ["created_at", "2024-01-27 13:02:42.092166"]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.093742"], ["id", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: hiz1qvlid12ek50l219j06wcaxr9 (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d0d4308f-6bde-4729-8d05-59ba4adfd88e) to Async(default) with arguments: #<GlobalID:0x000000010d04acc8 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/2>>
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"2"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e]   [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e] Performing ActiveStorage::AnalyzeJob (Job ID: d0d4308f-6bde-4729-8d05-59ba4adfd88e) from Async(default) enqueued at 2024-01-27T13:02:42.098162000Z with arguments: #<GlobalID:0x000000010d0632f0 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e]   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendered expenses/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 157)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e]   [1m[36mActiveStorage::Blob Update (2.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 620)
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 3.1ms | Allocations: 2721)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e]   [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e]   [1m[36mCategory Update (0.6ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.118235"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d0d4308f-6bde-4729-8d05-59ba4adfd88e] Performed ActiveStorage::AnalyzeJob (Job ID: d0d4308f-6bde-4729-8d05-59ba4adfd88e) from Async(default) in 20.08ms
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "test@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.132764"], ["updated_at", "2024-01-27 13:02:42.132764"], ["name", "Test User"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Category"], ["icon", nil], ["user_id", 7], ["created_at", "2024-01-27 13:02:42.141015"], ["updated_at", "2024-01-27 13:02:42.141015"]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "tdqf9uz7lqjv8efclfr1sdg1pjk5"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 13:02:42.145072"]]
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 3], ["blob_id", 3], ["created_at", "2024-01-27 13:02:42.146603"]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.148502"], ["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: tdqf9uz7lqjv8efclfr1sdg1pjk5 (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 203f1e47-703d-4e81-b212-22370cfddaaf) to Async(default) with arguments: #<GlobalID:0x000000010d0f87b0 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/3>>
+Processing by ExpensesController#create as HTML
+  Parameters: {"expense"=>{"amount"=>"100", "name"=>""}, "category_id"=>"3"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf]   [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf] Performing ActiveStorage::AnalyzeJob (Job ID: 203f1e47-703d-4e81-b212-22370cfddaaf) from Async(default) enqueued at 2024-01-27T13:02:42.153511000Z with arguments: #<GlobalID:0x000000010d11ae50 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf]   [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendered expenses/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 160)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf]   [1m[36mActiveStorage::Blob Update (1.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 644)
+Completed 200 OK in 16ms (Views: 4.6ms | ActiveRecord: 3.5ms | Allocations: 3312)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf]   [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf]   [1m[36mCategory Update (0.6ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.175760"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [203f1e47-703d-4e81-b212-22370cfddaaf] Performed ActiveStorage::AnalyzeJob (Job ID: 203f1e47-703d-4e81-b212-22370cfddaaf) from Async(default) in 24.39ms
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.188328"], ["updated_at", "2024-01-27 13:02:42.188328"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2024-01-27 08:02:42 -0500
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (1.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 8]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 8]]
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1049)
+  Rendered layouts/_navbar.html.erb (Duration: 9.1ms | Allocations: 872)
+  Rendered layouts/_alerts.html.erb (Duration: 0.7ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 84.6ms | Allocations: 22492)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 1.6ms | Allocations: 23180)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.311559"], ["updated_at", "2024-01-27 13:02:42.311559"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Example Category"], ["icon", nil], ["user_id", 9], ["created_at", "2024-01-27 13:02:42.315618"], ["updated_at", "2024-01-27 13:02:42.315618"]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "yeh3vqjcbiv2pwc6wccpgivgvjoc"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 13:02:42.318996"]]
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 4], ["blob_id", 4], ["created_at", "2024-01-27 13:02:42.320374"]]
+  [1m[36mCategory Update (0.3ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.321834"], ["id", 4]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: yeh3vqjcbiv2pwc6wccpgivgvjoc (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 2cc80044-104c-4d1d-bae6-3c70e49127bf) to Async(default) with arguments: #<GlobalID:0x000000010d4a3c70 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/4>>
+Started GET "/categories/4" for 127.0.0.1 at 2024-01-27 08:02:42 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf]   [1m[36mActiveStorage::Blob Load (4.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf] Performing ActiveStorage::AnalyzeJob (Job ID: 2cc80044-104c-4d1d-bae6-3c70e49127bf) from Async(default) enqueued at 2024-01-27T13:02:42.325568000Z with arguments: #<GlobalID:0x000000010d4cb400 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf]   [1m[36mActiveStorage::Blob Update (1.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf]   [1m[36mCategory Update (0.4ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.346242"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2cc80044-104c-4d1d-bae6-3c70e49127bf] Performed ActiveStorage::AnalyzeJob (Job ID: 2cc80044-104c-4d1d-bae6-3c70e49127bf) from Async(default) in 21.69ms
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 9], ["id", 4], ["LIMIT", 1]]
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 4]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 4]]
+  [1m[36mExpense Load (0.4ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 4]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 677)
+  Rendered layouts/_navbar.html.erb (Duration: 3.0ms | Allocations: 733)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2034)
+Completed 200 OK in 32ms (Views: 8.9ms | ActiveRecord: 1.4ms | Allocations: 4975)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.375050"], ["updated_at", "2024-01-27 13:02:42.375050"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (3.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Example Category"], ["icon", nil], ["user_id", 10], ["created_at", "2024-01-27 13:02:42.380864"], ["updated_at", "2024-01-27 13:02:42.380864"]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "aipev8fzq4xzdhkafbbhf2ncy25g"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 13:02:42.388792"]]
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 5], ["blob_id", 5], ["created_at", "2024-01-27 13:02:42.390708"]]
+  [1m[36mCategory Update (0.6ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.392851"], ["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.2ms) [0m[32mUploaded file to key: aipev8fzq4xzdhkafbbhf2ncy25g (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b6dfb8d3-1bad-4abc-af9e-06e1e12a738a) to Async(default) with arguments: #<GlobalID:0x000000010d5b2558 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/5>>
+Started GET "/categories/5/expenses/new" for 127.0.0.1 at 2024-01-27 08:02:42 -0500
+Processing by ExpensesController#new as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a]   [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a] Performing ActiveStorage::AnalyzeJob (Job ID: b6dfb8d3-1bad-4abc-af9e-06e1e12a738a) from Async(default) enqueued at 2024-01-27T13:02:42.398411000Z with arguments: #<GlobalID:0x000000010d5d0530 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/5>>
+  Parameters: {"category_id"=>"5"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 10], ["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a]   [1m[36mActiveStorage::Blob Update (1.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a]   [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a]   [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a]   [1m[36mCategory Update (1.3ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.423798"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a]   [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b6dfb8d3-1bad-4abc-af9e-06e1e12a738a] Performed ActiveStorage::AnalyzeJob (Job ID: b6dfb8d3-1bad-4abc-af9e-06e1e12a738a) from Async(default) in 30.13ms
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 10]]
+  Rendered expenses/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 3800)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 515)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 4985)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.7ms | Allocations: 6180)
+Started POST "/categories/5/expenses" for 127.0.0.1 at 2024-01-27 08:02:42 -0500
+Processing by ExpensesController#create as HTML
+  Parameters: {"expense"=>{"name"=>"New Expense", "amount"=>"50", "category_id"=>"5"}, "commit"=>"Save", "category_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mExpense Create (1.4ms)[0m  [1m[32mINSERT INTO "expenses" ("name", "amount", "author_id", "created_at", "updated_at", "category_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "New Expense"], ["amount", "50.0"], ["author_id", 10], ["created_at", "2024-01-27 13:02:42.466430"], ["updated_at", "2024-01-27 13:02:42.466430"], ["category_id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories/5
+Completed 302 Found in 19ms (ActiveRecord: 2.4ms | Allocations: 3503)
+Started GET "/categories/5" for 127.0.0.1 at 2024-01-27 08:02:42 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 10], ["id", 5], ["LIMIT", 1]]
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCACHE Expense Sum (0.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  [1m[36mExpense Load (0.4ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 5]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 421)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 501)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1546)
+Completed 200 OK in 11ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 3068)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "john@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.501058"], ["updated_at", "2024-01-27 13:02:42.501058"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Example Category"], ["icon", nil], ["user_id", 11], ["created_at", "2024-01-27 13:02:42.506024"], ["updated_at", "2024-01-27 13:02:42.506024"]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (12.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "ctms4jki51z6d78howy1cr69b06a"], ["filename", "arrow-left.svg"], ["content_type", "image/svg+xml"], ["metadata", "{\"identified\":true}"], ["service_name", "test"], ["byte_size", 500], ["checksum", "KAAHVl6fVRrRcJZg4VI1Gg=="], ["created_at", "2024-01-27 13:02:42.511612"]]
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 6], ["blob_id", 6], ["created_at", "2024-01-27 13:02:42.528450"]]
+  [1m[36mCategory Update (3.2ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.530967"], ["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (4.9ms) [0m[32mUploaded file to key: ctms4jki51z6d78howy1cr69b06a (checksum: KAAHVl6fVRrRcJZg4VI1Gg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f97160c7-82a6-479e-a640-34b0f013e09a) to Async(default) with arguments: #<GlobalID:0x000000010d8738c8 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/6>>
+Started GET "/categories/6/expenses/new" for 127.0.0.1 at 2024-01-27 08:02:42 -0500
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"6"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a] Performing ActiveStorage::AnalyzeJob (Job ID: f97160c7-82a6-479e-a640-34b0f013e09a) from Async(default) enqueued at 2024-01-27T13:02:42.542823000Z with arguments: #<GlobalID:0x000000010d89b490 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a] Skipping image analysis because the ruby-vips gem isn't installed
+  [1m[36mCategory Load (2.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 11], ["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a]   [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a]   [1m[36mActiveStorage::Blob Update (2.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a]   [1m[36mCategory Update (0.4ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 13:02:42.570647"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f97160c7-82a6-479e-a640-34b0f013e09a] Performed ActiveStorage::AnalyzeJob (Job ID: f97160c7-82a6-479e-a640-34b0f013e09a) from Async(default) in 28.77ms
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 11]]
+  Rendered expenses/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1895)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 490)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3017)
+Completed 200 OK in 21ms (Views: 14.7ms | ActiveRecord: 3.0ms | Allocations: 4365)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.625114"], ["updated_at", "2024-01-27 13:02:42.625114"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.641377"], ["updated_at", "2024-01-27 13:02:42.641377"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.658989"], ["updated_at", "2024-01-27 13:02:42.658989"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.673513"], ["updated_at", "2024-01-27 13:02:42.673513"], ["name", "Ye Min"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "yemin@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 13:02:42.724034"], ["updated_at", "2024-01-27 13:02:42.724034"], ["name", "yemin"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yemin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (107.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (26.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

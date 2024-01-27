@@ -1,0 +1,1049 @@
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-01-27 07:14:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+Completed 401 Unauthorized in 43ms (ActiveRecord: 0.0ms | Allocations: 4979)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-01-27 07:14:50 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 633)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 48.5ms | Allocations: 4054)
+  Rendered layouts/_navbar.html.erb (Duration: 4.8ms | Allocations: 1447)
+  Rendered layouts/_alerts.html.erb (Duration: 0.7ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 1113.3ms | Allocations: 88250)
+Completed 200 OK in 1453ms (Views: 1174.0ms | ActiveRecord: 124.8ms | Allocations: 112048)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-01-27 07:59:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+Completed 401 Unauthorized in 147ms (ActiveRecord: 0.0ms | Allocations: 3375)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-01-27 07:59:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 633)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 3410)
+  Rendered layouts/_navbar.html.erb (Duration: 4.8ms | Allocations: 1462)
+  Rendered layouts/_alerts.html.erb (Duration: 1.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 168.2ms | Allocations: 27673)
+Completed 200 OK in 311ms (Views: 187.9ms | ActiveRecord: 22.8ms | Allocations: 47863)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-01-27 07:59:16 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1898)
+  Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 663)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3856)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 5013)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-27 07:59:42 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Ivoncita", "email"=>"ivonnebenites@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (6.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ivonnebenites@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ivonnebenites@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "ivonnebenites@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 12:59:43.075706"], ["updated_at", "2024-01-27 12:59:43.075706"], ["name", "Ivoncita"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 385ms (ActiveRecord: 10.6ms | Allocations: 13907)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-27 07:59:43 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (3.9ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 5]]
+  ↳ app/views/categories/index.html.erb:4
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2490)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 4083)
+Completed 200 OK in 103ms (Views: 18.8ms | ActiveRecord: 9.7ms | Allocations: 19613)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2024-01-27 07:59:45 -0500
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1003)
+  Rendered layouts/_navbar.html.erb (Duration: 4.1ms | Allocations: 656)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2997)
+Completed 200 OK in 41ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 9205)
+
+
+Started POST "/categories" for 127.0.0.1 at 2024-01-27 07:59:54 -0500
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Books", "icon"=>#<ActionDispatch::Http::UploadedFile:0x000000011401e090 @tempfile=#<Tempfile:/var/folders/nk/t85yls6154520m90l8lv7tfw0000gp/T/RackMultipart20240127-87602-nk4urz.png>, @content_type="image/png", @original_filename="corregido.png", @headers="Content-Disposition: form-data; name=\"category[icon]\"; filename=\"corregido.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Save"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mCategory Create (2.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Books"], ["icon", nil], ["user_id", 5], ["created_at", "2024-01-27 12:59:54.481588"], ["updated_at", "2024-01-27 12:59:54.481588"]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mActiveStorage::Attachment Load (3.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mActiveStorage::Blob Create (3.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "7l2u55vf0f7z18y1ucxejo5qvgyf"], ["filename", "corregido.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 168397], ["checksum", "Sqypjx2jGTW0EkSYY6sBkQ=="], ["created_at", "2024-01-27 12:59:54.497064"]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 5], ["blob_id", 5], ["created_at", "2024-01-27 12:59:54.504693"]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mCategory Update (0.9ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:59:54.509202"], ["id", 5]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+[36m  Disk Storage (2.1ms) [0m[32mUploaded file to key: 7l2u55vf0f7z18y1ucxejo5qvgyf (checksum: Sqypjx2jGTW0EkSYY6sBkQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 91bffd80-2e51-40a3-b2a0-b0c63ab30a44) to Async(default) with arguments: #<GlobalID:0x000000011449d648 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/5>>
+[ActiveJob] ↳ app/controllers/categories_controller.rb:23:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 206ms (ActiveRecord: 35.2ms | Allocations: 38117)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-27 07:59:54 -0500
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44] Performing ActiveStorage::AnalyzeJob (Job ID: 91bffd80-2e51-40a3-b2a0-b0c63ab30a44) from Async(default) enqueued at 2024-01-27T12:59:54.582790000Z with arguments: #<GlobalID:0x0000000114507ed0 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44]   [1m[36mActiveStorage::Blob Update (2.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+Processing by CategoriesController#index as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44]   [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44]   [1m[36mCategory Update (0.7ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 12:59:54.661197"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44]   [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [91bffd80-2e51-40a3-b2a0-b0c63ab30a44] Performed ActiveStorage::AnalyzeJob (Job ID: 91bffd80-2e51-40a3-b2a0-b0c63ab30a44) from Async(default) in 52.76ms
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (1.6ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 5]]
+  ↳ app/views/categories/index.html.erb:4
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (3.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Category"], ["name", "icon"], ["record_id", 5]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:14
+  [1m[36mExpense Sum (0.6ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/views/categories/index.html.erb:23
+  Rendered categories/index.html.erb within layouts/application (Duration: 37.2ms | Allocations: 6476)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 115)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 7909)
+Completed 200 OK in 105ms (Views: 28.9ms | ActiveRecord: 25.3ms | Allocations: 18515)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--ab302c659cc33570d844747c1583ad7791de768d/corregido.png" for 127.0.0.1 at 2024-01-27 07:59:54 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--ab302c659cc33570d844747c1583ad7791de768d", "filename"=>"corregido"}
+  [1m[36mActiveStorage::Blob Load (3.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (3.5ms) [0m[34mGenerated URL for file at key: 7l2u55vf0f7z18y1ucxejo5qvgyf (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3bDJ1NTV2ZjBmN3oxOHkxdWN4ZWpvNXF2Z3lmIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY29ycmVnaWRvLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2NvcnJlZ2lkby5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAxLTI3VDEzOjA0OjU0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c1d95565cf44487a961d818663970bfcc676703e/corregido.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3bDJ1NTV2ZjBmN3oxOHkxdWN4ZWpvNXF2Z3lmIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY29ycmVnaWRvLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2NvcnJlZ2lkby5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAxLTI3VDEzOjA0OjU0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c1d95565cf44487a961d818663970bfcc676703e/corregido.png
+Completed 302 Found in 28ms (ActiveRecord: 3.4ms | Allocations: 2836)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3bDJ1NTV2ZjBmN3oxOHkxdWN4ZWpvNXF2Z3lmIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY29ycmVnaWRvLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2NvcnJlZ2lkby5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAxLTI3VDEzOjA0OjU0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c1d95565cf44487a961d818663970bfcc676703e/corregido.png" for 127.0.0.1 at 2024-01-27 07:59:54 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"corregido"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2024-01-27 07:59:56 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 5], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+  [1m[36mExpense Sum (0.7ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCACHE Expense Sum (0.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:3
+  [1m[36mExpense Load (8.4ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:10
+  Rendered categories/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1588)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 718)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | Allocations: 3607)
+Completed 200 OK in 309ms (Views: 75.7ms | ActiveRecord: 9.9ms | Allocations: 7356)
+
+
+Started GET "/categories/5/expenses/new" for 127.0.0.1 at 2024-01-27 07:59:58 -0500
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 5], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:9:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/expenses/new.html.erb:14
+  Rendered expenses/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3117)
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 712)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5141)
+Completed 200 OK in 68ms (Views: 20.6ms | ActiveRecord: 1.0ms | Allocations: 13928)
+
+
+Started POST "/categories/5/expenses" for 127.0.0.1 at 2024-01-27 08:00:07 -0500
+Processing by ExpensesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "expense"=>{"name"=>"Books", "amount"=>"234", "category_id"=>"5"}, "commit"=>"Save", "category_id"=>"5"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mExpense Create (4.2ms)[0m  [1m[32mINSERT INTO "expenses" ("name", "amount", "author_id", "created_at", "updated_at", "category_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Books"], ["amount", "234.0"], ["author_id", 5], ["created_at", "2024-01-27 13:00:07.129937"], ["updated_at", "2024-01-27 13:00:07.129937"], ["category_id", 5]]
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/categories/5
+Completed 302 Found in 41ms (ActiveRecord: 7.3ms | Allocations: 8458)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2024-01-27 08:00:07 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 5], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/controllers/categories_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCACHE Expense Sum (0.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:3
+  [1m[36mExpense Load (1.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:10
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1299)
+  Rendered layouts/_navbar.html.erb (Duration: 2.8ms | Allocations: 694)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3197)
+Completed 200 OK in 25ms (Views: 11.9ms | ActiveRecord: 2.9ms | Allocations: 6547)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-27 08:00:09 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (0.9ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 5]]
+  ↳ app/views/categories/index.html.erb:4
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Category"], ["name", "icon"], ["record_id", 5]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:14
+  [1m[36mExpense Sum (1.6ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 5]]
+  ↳ app/views/categories/index.html.erb:23
+  Rendered categories/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 4356)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 5650)
+Completed 200 OK in 44ms (Views: 26.5ms | ActiveRecord: 6.8ms | Allocations: 7585)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiI3bDJ1NTV2ZjBmN3oxOHkxdWN4ZWpvNXF2Z3lmIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY29ycmVnaWRvLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ2NvcnJlZ2lkby5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTAxLTI3VDEzOjA0OjU0Ljk0OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c1d95565cf44487a961d818663970bfcc676703e/corregido.png" for 127.0.0.1 at 2024-01-27 08:00:09 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"corregido"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 171)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:26:31 -0500
+  
+ActiveRecord::DuplicateMigrationNameError (
+
+Multiple migrations have the name DeviseCreateUsers.
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:1553:in `validate'
+activerecord (7.1.3) lib/active_record/migration.rb:1423:in `initialize'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `new'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `open'
+activerecord (7.1.3) lib/active_record/migration.rb:775:in `block (2 levels) in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:26:32 -0500
+  
+ActiveRecord::DuplicateMigrationNameError (
+
+Multiple migrations have the name DeviseCreateUsers.
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:1553:in `validate'
+activerecord (7.1.3) lib/active_record/migration.rb:1423:in `initialize'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `new'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `open'
+activerecord (7.1.3) lib/active_record/migration.rb:775:in `block (2 levels) in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (28.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (9895.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_development"[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:28:07 -0500
+  
+ActiveRecord::DuplicateMigrationNameError (
+
+Multiple migrations have the name DeviseCreateUsers.
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:1553:in `validate'
+activerecord (7.1.3) lib/active_record/migration.rb:1423:in `initialize'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `new'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `open'
+activerecord (7.1.3) lib/active_record/migration.rb:775:in `block (2 levels) in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:28:07 -0500
+  
+ActiveRecord::DuplicateMigrationNameError (
+
+Multiple migrations have the name DeviseCreateUsers.
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:1553:in `validate'
+activerecord (7.1.3) lib/active_record/migration.rb:1423:in `initialize'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `new'
+activerecord (7.1.3) lib/active_record/migration.rb:1292:in `open'
+activerecord (7.1.3) lib/active_record/migration.rb:775:in `block (2 levels) in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (24.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (9333.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_development"[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (446.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_development"[0m
+  [1m[35m (331.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_test"[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[35m (887.9ms)[0m  [1m[35mCREATE DATABASE "budget_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (319.7ms)[0m  [1m[35mCREATE DATABASE "budget_app_test" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[35m (250.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_development"[0m
+  [1m[35m (202.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_test"[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[35m (2810.0ms)[0m  [1m[35mCREATE DATABASE "budget_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (354.0ms)[0m  [1m[35mCREATE DATABASE "budget_app_test" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[35m (38.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (21.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-01-27 18:44:58.642815', '2024-01-27 18:44:58.642824') RETURNING "key"[0m
+Migrating to DeviseCreateUsers (20240122202302)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (47.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (29.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202302') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20240122202355)
+  [1m[36mTRANSACTION (42.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (92.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202355') RETURNING "version"[0m
+  [1m[36mTRANSACTION (39.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExpenses (20240122202455)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.1ms)[0m  [1m[35mCREATE TABLE "expenses" ("id" bigserial primary key, "name" character varying, "amount" decimal, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_06966d0da0"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_category_id" ON "expenses" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202455') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeCategoryIdToAuthorIdInExpenses (20240122202658)
+  [1m[36mTRANSACTION (22.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE "expenses" DROP CONSTRAINT "fk_rails_06966d0da0"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP INDEX  "index_expenses_on_category_id"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "expenses" RENAME COLUMN "category_id" TO "author_id"[0m
+  [1m[35m (11.6ms)[0m  [1m[35mALTER TABLE "expenses" ADD CONSTRAINT "fk_rails_896acdaedb"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_author_id" ON "expenses" ("author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202658') RETURNING "version"[0m
+  [1m[36mTRANSACTION (30.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryIdToExpenses (20240122202806)
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE "expenses" ADD "category_id" bigint[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_category_id" ON "expenses" ("category_id")[0m
+  [1m[35m (9.9ms)[0m  [1m[35mALTER TABLE "expenses" ADD CONSTRAINT "fk_rails_06966d0da0"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202806') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240122202915)
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.9ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (44.0ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (34.9ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202915') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20240123031612)
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.2ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240123031612') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (30.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:45:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 401 Unauthorized in 400ms (ActiveRecord: 70.7ms | Allocations: 11804)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-01-27 13:45:50 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 633)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.4ms | Allocations: 3408)
+  Rendered layouts/_navbar.html.erb (Duration: 6.5ms | Allocations: 1462)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 267.3ms | Allocations: 27627)
+Completed 200 OK in 434ms (Views: 289.6ms | ActiveRecord: 0.0ms | Allocations: 43800)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-01-27 13:45:55 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1898)
+  Rendered layouts/_navbar.html.erb (Duration: 3.9ms | Allocations: 663)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 3856)
+Completed 200 OK in 44ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 5007)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-01-27 13:47:08 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Ivoncita2345", "email"=>"ivonecita8888@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ivonecita8888@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ivonecita8888@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "ivonecita8888@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-27 18:47:09.199611"], ["updated_at", "2024-01-27 18:47:09.199611"], ["name", "Ivoncita2345"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 316ms (ActiveRecord: 4.8ms | Allocations: 10745)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:47:09 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (25.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:4
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 47.2ms | Allocations: 2490)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 143)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 4072)
+Completed 200 OK in 325ms (Views: 33.2ms | ActiveRecord: 58.4ms | Allocations: 19280)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2024-01-27 13:47:11 -0500
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 929)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 656)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 2934)
+Completed 200 OK in 46ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 9121)
+
+
+Started POST "/categories" for 127.0.0.1 at 2024-01-27 13:47:25 -0500
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Desk", "icon"=>#<ActionDispatch::Http::UploadedFile:0x0000000107427c98 @tempfile=#<Tempfile:/var/folders/nk/t85yls6154520m90l8lv7tfw0000gp/T/RackMultipart20240127-73159-rmp44l.png>, @content_type="image/png", @original_filename="datoimportante.png", @headers="Content-Disposition: form-data; name=\"category[icon]\"; filename=\"datoimportante.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Save"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mCategory Create (68.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Desk"], ["icon", nil], ["user_id", 1], ["created_at", "2024-01-27 18:47:25.676477"], ["updated_at", "2024-01-27 18:47:25.676477"]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mActiveStorage::Attachment Load (6.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Category"], ["name", "icon"], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mActiveStorage::Blob Create (3.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "yldler69z7ndt2gf6503scjmy4k1"], ["filename", "datoimportante.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 130104], ["checksum", "ZM8gARU4T0p+ti6aF363Kg=="], ["created_at", "2024-01-27 18:47:25.759721"]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mActiveStorage::Attachment Create (29.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "icon"], ["record_type", "Category"], ["record_id", 1], ["blob_id", 1], ["created_at", "2024-01-27 18:47:25.766093"]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mCategory Update (3.1ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 18:47:25.800354"], ["id", 1]]
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:23:in `create'
+[36m  Disk Storage (3.2ms) [0m[32mUploaded file to key: yldler69z7ndt2gf6503scjmy4k1 (checksum: ZM8gARU4T0p+ti6aF363Kg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 57c6073b-05fd-4273-969f-befda7a0cd00) to Async(default) with arguments: #<GlobalID:0x0000000107cb2318 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/categories_controller.rb:23:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 424ms (ActiveRecord: 178.0ms | Allocations: 38122)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:47:25 -0500
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00] Performing ActiveStorage::AnalyzeJob (Job ID: 57c6073b-05fd-4273-969f-befda7a0cd00) from Async(default) enqueued at 2024-01-27T18:47:25.895256000Z with arguments: #<GlobalID:0x0000000107d32f68 @uri=#<URI::GID gid://budget-app/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00]   [1m[36mTRANSACTION (7.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00]   [1m[36mActiveStorage::Blob Update (37.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+Processing by CategoriesController#index as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00]   [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00]   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00]   [1m[36mCategory Update (2.1ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = $1 WHERE "categories"."id" = $2[0m  [["updated_at", "2024-01-27 18:47:26.049816"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00]   [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c6073b-05fd-4273-969f-befda7a0cd00] Performed ActiveStorage::AnalyzeJob (Job ID: 57c6073b-05fd-4273-969f-befda7a0cd00) from Async(default) in 120.8ms
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (27.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:4
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Category"], ["name", "icon"], ["record_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:14
+  [1m[36mExpense Sum (0.5ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/categories/index.html.erb:23
+  Rendered categories/index.html.erb within layouts/application (Duration: 87.9ms | Allocations: 6479)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 115)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered layout layouts/application.html.erb (Duration: 93.3ms | Allocations: 7912)
+Completed 200 OK in 202ms (Views: 35.4ms | ActiveRecord: 71.4ms | Allocations: 18618)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--4a502c72a4cb02aa41d7a201a46c98244bae7f87/datoimportante.png" for 127.0.0.1 at 2024-01-27 13:47:26 -0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--4a502c72a4cb02aa41d7a201a46c98244bae7f87", "filename"=>"datoimportante"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (3.7ms) [0m[34mGenerated URL for file at key: yldler69z7ndt2gf6503scjmy4k1 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bGRsZXI2OXo3bmR0MmdmNjUwM3Njam15NGsxIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGF0b2ltcG9ydGFudGUucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnZGF0b2ltcG9ydGFudGUucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wMS0yN1QxODo1MjoyNi40MDBaIiwicHVyIjoiYmxvYl9rZXkifX0=--bed8b69980d917595c7caa676a288161d70a3c9b/datoimportante.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bGRsZXI2OXo3bmR0MmdmNjUwM3Njam15NGsxIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGF0b2ltcG9ydGFudGUucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnZGF0b2ltcG9ydGFudGUucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wMS0yN1QxODo1MjoyNi40MDBaIiwicHVyIjoiYmxvYl9rZXkifX0=--bed8b69980d917595c7caa676a288161d70a3c9b/datoimportante.png
+Completed 302 Found in 37ms (ActiveRecord: 0.6ms | Allocations: 2810)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bGRsZXI2OXo3bmR0MmdmNjUwM3Njam15NGsxIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGF0b2ltcG9ydGFudGUucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnZGF0b2ltcG9ydGFudGUucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wMS0yN1QxODo1MjoyNi40MDBaIiwicHVyIjoiYmxvYl9rZXkifX0=--bed8b69980d917595c7caa676a288161d70a3c9b/datoimportante.png" for 127.0.0.1 at 2024-01-27 13:47:26 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"datoimportante"}
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2024-01-27 13:47:28 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+  [1m[36mExpense Sum (0.7ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCACHE Expense Sum (0.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:3
+  [1m[36mExpense Load (0.5ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:10
+  Rendered categories/show.html.erb within layouts/application (Duration: 24.4ms | Allocations: 1590)
+  Rendered layouts/_navbar.html.erb (Duration: 6.9ms | Allocations: 717)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 3608)
+Completed 200 OK in 56ms (Views: 38.7ms | ActiveRecord: 1.9ms | Allocations: 7369)
+
+
+Started GET "/categories/1/expenses/new" for 127.0.0.1 at 2024-01-27 13:47:30 -0500
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (71.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:9:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/expenses/new.html.erb:14
+  Rendered expenses/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 3113)
+  Rendered layouts/_navbar.html.erb (Duration: 4.0ms | Allocations: 712)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 5137)
+Completed 200 OK in 204ms (Views: 47.8ms | ActiveRecord: 77.8ms | Allocations: 13901)
+
+
+Started POST "/categories/1/expenses" for 127.0.0.1 at 2024-01-27 13:47:38 -0500
+Processing by ExpensesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "expense"=>{"name"=>"Comics", "amount"=>"234", "category_id"=>"1"}, "commit"=>"Save", "category_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mExpense Create (15.7ms)[0m  [1m[32mINSERT INTO "expenses" ("name", "amount", "author_id", "created_at", "updated_at", "category_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Comics"], ["amount", "234.0"], ["author_id", 1], ["created_at", "2024-01-27 18:47:38.782921"], ["updated_at", "2024-01-27 18:47:38.782921"], ["category_id", 1]]
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/expenses_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/categories/1
+Completed 302 Found in 185ms (ActiveRecord: 20.0ms | Allocations: 8540)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2024-01-27 13:47:38 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:41:in `set_category'
+  [1m[36mExpense Sum (7.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/controllers/categories_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCACHE Expense Sum (0.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:3
+  [1m[36mExpense Load (0.7ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:10
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1300)
+  Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 697)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3201)
+Completed 200 OK in 116ms (Views: 10.9ms | ActiveRecord: 9.9ms | Allocations: 6580)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-27 13:47:41 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mExpense Sum (3.0ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" IN (SELECT "categories"."id" FROM "categories" WHERE "categories"."user_id" = $1)[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:4
+  [1m[36mCategory Load (38.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (29.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Category"], ["name", "icon"], ["record_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  [1m[36mActiveStorage::Blob Load (4.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:14
+  [1m[36mExpense Sum (0.6ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" WHERE "expenses"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/categories/index.html.erb:23
+  Rendered categories/index.html.erb within layouts/application (Duration: 113.4ms | Allocations: 4355)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 127.5ms | Allocations: 5660)
+Completed 200 OK in 135ms (Views: 51.9ms | ActiveRecord: 76.7ms | Allocations: 7613)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ5bGRsZXI2OXo3bmR0MmdmNjUwM3Njam15NGsxIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGF0b2ltcG9ydGFudGUucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnZGF0b2ltcG9ydGFudGUucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wMS0yN1QxODo1MjoyNi40MDBaIiwicHVyIjoiYmxvYl9rZXkifX0=--bed8b69980d917595c7caa676a288161d70a3c9b/datoimportante.png" for 127.0.0.1 at 2024-01-27 13:47:42 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"datoimportante"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 169)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (261.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_development"[0m
+  [1m[35m (159.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "budget_app_test"[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[35m (940.6ms)[0m  [1m[35mCREATE DATABASE "budget_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (392.8ms)[0m  [1m[35mCREATE DATABASE "budget_app_test" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (26.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-01-27 19:37:15.626403', '2024-01-27 19:37:15.626411') RETURNING "key"[0m
+Migrating to DeviseCreateUsers (20240122202302)
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202302') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20240122202355)
+  [1m[36mTRANSACTION (23.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (33.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202355') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExpenses (20240122202455)
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.7ms)[0m  [1m[35mCREATE TABLE "expenses" ("id" bigserial primary key, "name" character varying, "amount" decimal, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_06966d0da0"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_category_id" ON "expenses" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202455') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeCategoryIdToAuthorIdInExpenses (20240122202658)
+  [1m[36mTRANSACTION (24.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "expenses" DROP CONSTRAINT "fk_rails_06966d0da0"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP INDEX  "index_expenses_on_category_id"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "expenses" RENAME COLUMN "category_id" TO "author_id"[0m
+  [1m[35m (30.3ms)[0m  [1m[35mALTER TABLE "expenses" ADD CONSTRAINT "fk_rails_896acdaedb"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_author_id" ON "expenses" ("author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202658') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryIdToExpenses (20240122202806)
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.8ms)[0m  [1m[35mALTER TABLE "expenses" ADD "category_id" bigint[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_category_id" ON "expenses" ("category_id")[0m
+  [1m[35m (25.8ms)[0m  [1m[35mALTER TABLE "expenses" ADD CONSTRAINT "fk_rails_06966d0da0"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202806') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20240122202915)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (39.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (31.1ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240122202915') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20240123031612)
+  [1m[36mTRANSACTION (24.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.3ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240123031612') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2127889314188895495)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-01-27 14:37:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 256ms (ActiveRecord: 101.7ms | Allocations: 11822)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-01-27 14:37:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 633)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.0ms | Allocations: 3408)
+  Rendered layouts/_navbar.html.erb (Duration: 6.0ms | Allocations: 1462)
+  Rendered layouts/_alerts.html.erb (Duration: 0.7ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 133.8ms | Allocations: 25688)
+Completed 200 OK in 219ms (Views: 155.4ms | ActiveRecord: 0.0ms | Allocations: 41886)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-01-27 14:37:36 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 1898)
+  Rendered layouts/_navbar.html.erb (Duration: 3.3ms | Allocations: 663)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 3856)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 5007)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/ivonnebenites/Documents/Projects/budget_app/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-01-27 15:25:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+Completed 401 Unauthorized in 67ms (ActiveRecord: 0.0ms | Allocations: 3382)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-01-27 15:25:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 633)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 3412)
+  Rendered layouts/_navbar.html.erb (Duration: 7.6ms | Allocations: 1462)
+  Rendered layouts/_alerts.html.erb (Duration: 1.1ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 240.7ms | Allocations: 27750)
+Completed 200 OK in 764ms (Views: 266.5ms | ActiveRecord: 140.4ms | Allocations: 47969)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-01-27 15:25:51 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 124)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 940)
+  Rendered layouts/_navbar.html.erb (Duration: 14.0ms | Allocations: 645)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 2771)
+Completed 200 OK in 76ms (Views: 62.0ms | ActiveRecord: 0.0ms | Allocations: 3548)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-01-27 15:25:52 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 35.1ms | Allocations: 1899)
+  Rendered layouts/_navbar.html.erb (Duration: 10.7ms | Allocations: 666)
+  Rendered layouts/_alerts.html.erb (Duration: 1.2ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 65.6ms | Allocations: 3869)
+Completed 200 OK in 143ms (Views: 83.6ms | ActiveRecord: 0.0ms | Allocations: 5022)
+
+
