@@ -6,13 +6,14 @@
 - [📗 Table of Contents:](#-table-of-contents)
 - [📖 \[budget\_app\] ](#-budget_app-)
   - [🛠 Live demo link ](#-live-demo-link-)
+  - [🛠 Video link ](#-video-link-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
-    - [🧑🏽‍🍳 Key Features ](#-key-features-)
+    - [🧑🏽 Key Features ](#-key-features-)
   - [💻 Getting Started ](#-getting-started-)
-    - [🧑🏽‍🍳 Setup](#-setup)
+    - [Setup](#setup)
   - [💰 Author ](#-author-)
-  - [🔭🧑🏽‍🍳 Future Features ](#-future-features-)
+  - [🔭🧑🏽 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -25,9 +26,12 @@
 <br/>
 
 ## 🛠 Live demo link <a name="live link">
-https://hidden-woodland-06978-c43dd9640957.herokuapp.com/users/sign_in
+https://www.loom.com/share/d041f6b4ec1f4e7e90cad609fb596458
 </a>
 
+## 🛠 Video link <a name="live link">
+
+</a>
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -57,7 +61,7 @@ https://hidden-woodland-06978-c43dd9640957.herokuapp.com/users/sign_in
   </ul>
 </details>
 
-### 🧑🏽‍🍳 Key Features <a name="key-features"></a>
+### 🧑🏽 Key Features <a name="key-features"></a>
 - **[Login page]**
 - **[Registration page]**
 - **[Create categories]**
@@ -71,7 +75,7 @@ https://hidden-woodland-06978-c43dd9640957.herokuapp.com/users/sign_in
 
 To get a local copy up and running, follow these steps.
 
-### 🧑🏽‍🍳 Setup
+### Setup
 
 Clone this repository to your desired folder:
 
@@ -94,7 +98,7 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🔭🧑🏽‍🍳 Future Features <a name="future-features"></a>
+## 🔭🧑🏽 Future Features <a name="future-features"></a>
 
 - [ ] **[Add more functionalities to the interface design.]**
 
